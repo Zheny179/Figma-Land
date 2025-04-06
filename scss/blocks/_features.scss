@@ -1,0 +1,155 @@
+.features {
+  padding: 62px 0;
+  &__title {
+    text-align: center;
+    font-size: 52px;
+    font-weight: 400;
+    line-height: 1.19;
+    margin-bottom: 27px;
+  }
+
+  &__text {
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+    max-width: 602px;
+    margin: 0 auto;
+    margin-bottom: 80px;
+  }
+
+  &__advantages {
+    display: flex;
+
+    &-images {
+      position: relative;
+
+      &-bg {
+        width: 696px;
+        height: 659px;
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        right: -12px;
+        background: url(../images/imgs/features-small.png) no-repeat;
+        width: 446px;
+        height: 292px;
+        z-index: 1;
+        background-size: contain;
+      }
+    }
+
+    &-block {
+      margin: 54px 0;
+      margin-left: 27px;
+    }
+
+    &-item {
+      margin-bottom: 35px;
+      ul {
+        margin: 0;
+        position: relative;
+      }
+
+      &-single {
+        &::after {
+          content: '';
+          position: absolute;
+          top: 7px;
+          left: 0;
+          bottom: -9px;
+          right: 0;
+          background: url(../images/icons/restaurant-menu.svg) no-repeat;
+        }
+        li {
+          width: 150px;
+        }
+      }
+
+      &-interface {
+        &::after {
+          content: '';
+          position: absolute;
+          top: 3px;
+          left: 0;
+          bottom: -9px;
+          right: 0;
+          background: url(../images/icons/alien.svg) no-repeat;
+        }
+        li {
+          width: 150px;
+        }
+      }
+
+      &-rules {
+        &::after {
+          content: '';
+          position: absolute;
+          top: -15px;
+          left: -8px;
+          bottom: 0;
+          right: 0;
+          background: url(../images/icons/inclusive.svg) no-repeat;
+        }
+        li {
+          width: 150px;
+        }
+      }
+
+      p {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.5;
+        max-width: 250px;
+        padding: 10px;
+        margin: 0;
+        margin-top: 10px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .wrap-padding {
+    padding: 0 15px;
+  }
+
+  .features {
+    &__text {
+      margin-bottom: 27px;
+    }
+
+    &__advantages {
+      flex-direction: column;
+      align-items: center;
+
+      &-images {
+        &-bg {
+          width: 696px;
+          height: 659px;
+        }
+        &::before {
+          bottom: 0;
+          right: 71px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .features__advantages {
+    &-images {
+      &-bg {
+        width: 324px;
+        height: 319px;
+      }
+      &::before {
+        width: 232px;
+        height: 160px;
+      }
+    }
+  }
+}

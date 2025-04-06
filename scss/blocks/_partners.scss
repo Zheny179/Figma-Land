@@ -1,0 +1,53 @@
+.partners {
+  padding: 50px 0;
+  margin-bottom: 100px;
+  &__block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &-title {
+      font-weight: 400;
+      font-size: 52px;
+      line-height: 1.19;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    &-text {
+      font-weight: 400;
+      line-height: 1.5;
+      text-align: center;
+      max-width: 591px;
+      margin-bottom: 60px;
+    }
+  }
+
+  &__brands {
+    display: flex;
+    gap: 74px;
+    justify-content: center;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+  }
+
+  &__btn {
+    margin: 0 auto;
+    display: block;
+    @include btn(#fff, transparent, 0px, $light-text, 17px, 20px, 40px);
+    transition: all 0.5s;
+    &:hover {
+      @include btn($primary, $primary, 0px, $light-text, 17px, 20px, 40px);
+    }
+
+    &:active {
+      transform: scale(0.9);
+    }
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .wrap-padding {
+    padding: 0 15px;
+  }
+}

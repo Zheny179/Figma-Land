@@ -1,0 +1,119 @@
+.contents {
+  padding: 50px 0;
+  margin-bottom: 100px;
+
+  &__title {
+    font-weight: 400;
+    font-size: 52px;
+    line-height: 1.19;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 20px;
+    text-align: center;
+    line-height: 1.5;
+    max-width: 591px;
+    margin: 0 auto;
+    margin-bottom: 44px;
+  }
+
+  &__cards {
+    display: flex;
+    gap: 33px;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    &-card {
+      background-color: $light-text;
+      color: $first-text;
+      text-align: center;
+      padding: 40px 35px;
+      border-radius: 10px;
+      max-width: 476px;
+
+      &-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h3 {
+          font-size: 20px;
+          line-height: 1.5;
+          margin: 0;
+          margin-bottom: 30px;
+        }
+
+        p {
+          font-weight: 400;
+          font-size: 16px;
+          color: $second-text;
+          line-height: 1.5;
+          width: 255px;
+          margin: 0;
+          margin-bottom: 67px;
+        }
+
+        &-btn {
+          @include btn(transparent, $primary, 0px, $light-text, 17px, 13.5px, 46px);
+          margin-bottom: 57px;
+          transition: all 0.5s;
+
+          &:hover {
+            @include btn(#000, transparent, 0px, $first-text, 17px, 13.5px, 46px);
+          }
+
+          &:active {
+            transform: scale(0.9);
+          }
+        }
+      }
+    }
+
+    &-card2 {
+      padding: 40px 48.5px;
+
+      button {
+        margin-bottom: 30px;
+      }
+
+      p {
+        margin-bottom: 40px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1020px) {
+  .wrap-padding {
+    padding: 0 15px;
+  }
+
+  .contents {
+    &__cards {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .contents {
+    &__cards {
+      &-card {
+        max-width: 380px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .contents {
+    &__cards {
+      &-card {
+        max-width: 300px;
+      }
+    }
+  }
+}
